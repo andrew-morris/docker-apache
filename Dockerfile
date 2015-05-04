@@ -3,8 +3,7 @@ MAINTAINER Andrew Morris <morr.drew@gmail.com>
 
 # Install base packages
 RUN apt-get update && \
-    DEBIAN_FRONTEND=noninteractive apt-get -yq install \
-        apache2 && \
+    DEBIAN_FRONTEND=noninteractive apt-get -yq install apache2 && \
     rm -rf /var/lib/apt/lists/*
 
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf 
